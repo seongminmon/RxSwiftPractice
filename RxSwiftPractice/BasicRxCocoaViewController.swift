@@ -20,6 +20,7 @@ final class BasicRxCocoaViewController: UIViewController {
         $0.backgroundColor = .lightGray
     }
     private let tableView = UITableView()
+    private let simpleSwitch = UISwitch()
     
     private let disposeBag = DisposeBag()
     
@@ -28,11 +29,12 @@ final class BasicRxCocoaViewController: UIViewController {
         configureView()
         setPickerView()
         setTableView()
+        setSwitch()
     }
     
     private func configureView() {
         view.backgroundColor = .white
-        [simpleLabel, pickerView, tableView].forEach {
+        [simpleLabel, pickerView, tableView, simpleSwitch].forEach {
             view.addSubview($0)
         }
         simpleLabel.snp.makeConstraints {
@@ -48,6 +50,10 @@ final class BasicRxCocoaViewController: UIViewController {
             $0.top.equalTo(pickerView.snp.bottom).offset(20)
             $0.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(20)
             $0.height.equalTo(44 * 3)
+        }
+        simpleSwitch.snp.makeConstraints {
+            $0.top.equalTo(tableView.snp.bottom)
+            $0.centerX.equalToSuperview()
         }
     }
     
@@ -96,5 +102,14 @@ final class BasicRxCocoaViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    
+    private func setSwitch() {
+        Observable.of(true)
+            .bind(to: simpleSwitch.rx.isOn)
+            .disposed(by: disposeBag)
+        
+        simpleSwitch.rx.isOn
+            .map { $0 ? "스위치 On" : "스위치 Off" }
+            .bind(to: simpleLabel.rx.text)
+            .disposed(by: disposeBag)
+    }
 }
