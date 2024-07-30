@@ -19,6 +19,7 @@ final class BasicRxCocoaViewController: UIViewController {
         $0.textAlignment = .center
         $0.backgroundColor = .lightGray
     }
+    private let tableView = UITableView()
     
     private let disposeBag = DisposeBag()
     
@@ -26,22 +27,28 @@ final class BasicRxCocoaViewController: UIViewController {
         super.viewDidLoad()
         configureView()
         setPickerView()
+        setTableView()
     }
     
     private func configureView() {
-        [pickerView, simpleLabel].forEach {
+        view.backgroundColor = .white
+        [simpleLabel, pickerView, tableView].forEach {
             view.addSubview($0)
         }
+        simpleLabel.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).inset(40)
+            $0.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(20)
+            $0.height.equalTo(30)
+        }
         pickerView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).inset(20)
+            $0.top.equalTo(simpleLabel.snp.bottom)
             $0.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
-        simpleLabel.snp.makeConstraints {
+        tableView.snp.makeConstraints {
             $0.top.equalTo(pickerView.snp.bottom).offset(20)
             $0.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(20)
-            $0.height.equalTo(50)
+            $0.height.equalTo(44 * 3)
         }
-        view.backgroundColor = .white
     }
     
     private func setPickerView() {
@@ -63,4 +70,31 @@ final class BasicRxCocoaViewController: UIViewController {
             .bind(to: simpleLabel.rx.text)
             .disposed(by: disposeBag)
     }
+    
+    private func setTableView() {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        let items = Observable.just([
+            "First Item",
+            "Second Item",
+            "Third Item"
+        ])
+        
+        items
+            .bind(to: tableView.rx.items) { tableView, row, element in
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+                cell.textLabel?.text = "\(element) @ row \(row)"
+                return cell
+            }
+            .disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(String.self)
+            .map { data in
+                "\(data)를 클릭했습니다."
+            }
+            .bind(to: simpleLabel.rx.text)
+            .disposed(by: disposeBag)
+    }
+    
+    
 }
