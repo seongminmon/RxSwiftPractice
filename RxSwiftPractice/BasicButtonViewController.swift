@@ -98,19 +98,50 @@ final class BasicButtonViewController: UIViewController {
 //            .disposed(by: disposeBag)
         
         // 5. 메모리 leak 대응 (3)
+//        basicButton.rx.tap
+//            .subscribe(with: self, onNext: { owner, _ in
+//                print("next")
+//                owner.basicLabel.text = "\(Int.random(in: 1...100))번이 선택되었습니다."
+//            }, onDisposed: { owner in
+//                print("dispose")
+//            })
+//            .disposed(by: disposeBag)
+        
+        // 6. UI 업데이트 메인쓰레드에서 처리하기 (1)
+//        basicButton.rx.tap
+//            .subscribe(with: self, onNext: { owner, _ in
+//                print("next")
+//                DispatchQueue.main.async {
+//                    owner.basicLabel.text = "\(Int.random(in: 1...100))번이 선택되었습니다."
+//                }
+//            }, onDisposed: { owner in
+//                print("dispose")
+//            })
+//            .disposed(by: disposeBag)
+        
+        // 7. UI 업데이트 메인쓰레드에서 처리하기 (2)
+//        basicButton.rx.tap
+//            .observe(on: MainScheduler.instance)
+//            .subscribe(with: self, onNext: { owner, _ in
+//                print("next")
+//                owner.basicLabel.text = "\(Int.random(in: 1...100))번이 선택되었습니다."
+//            }, onDisposed: { owner in
+//                print("dispose")
+//            })
+//            .disposed(by: disposeBag)
+        
+        // 8. bind: next 이벤트만 받고, 메인쓰레드 보장하는 subscribe
+//        basicButton.rx.tap
+//            .bind(with: self) { owner, _ in
+//                print("next")
+//                owner.basicLabel.text = "\(Int.random(in: 1...100))번이 선택되었습니다."
+//            }
+//            .disposed(by: disposeBag)
+        
+        // 9. map과 bind(to:) 사용
         basicButton.rx.tap
-            .subscribe(with: self, onNext: { owner, _ in
-                print("next")
-                owner.basicLabel.text = "\(Int.random(in: 1...100))번이 선택되었습니다."
-            }, onDisposed: { owner in
-                print("dispose")
-            })
+            .map { "\(Int.random(in: 1...100))번이 선택되었습니다." }
+            .bind(to: basicLabel.rx.text)
             .disposed(by: disposeBag)
-        
-        
-        
-        
-        
-        //
     }
 }
