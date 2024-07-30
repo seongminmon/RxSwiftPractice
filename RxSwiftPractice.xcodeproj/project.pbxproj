@@ -17,6 +17,7 @@
 		2408155C2C58CD2D00886D1E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2408155B2C58CD2D00886D1E /* RxSwift */; };
 		2408155F2C58CD3900886D1E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2408155E2C58CD3900886D1E /* SnapKit */; };
 		240815622C58CE5B00886D1E /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 240815612C58CE5B00886D1E /* Then */; };
+		240815642C58D78500886D1E /* BasicRxCocoaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240815632C58D78500886D1E /* BasicRxCocoaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2408154E2C58C80400886D1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		240815502C58C80400886D1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		240815562C58C81500886D1E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		240815632C58D78500886D1E /* BasicRxCocoaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRxCocoaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				240815422C58C80300886D1E /* AppDelegate.swift */,
 				240815442C58C80300886D1E /* SceneDelegate.swift */,
 				240815462C58C80300886D1E /* BasicButtonViewController.swift */,
+				240815632C58D78500886D1E /* BasicRxCocoaViewController.swift */,
 				2408154B2C58C80400886D1E /* Assets.xcassets */,
 				2408154D2C58C80400886D1E /* LaunchScreen.storyboard */,
 				240815502C58C80400886D1E /* Info.plist */,
@@ -159,6 +162,7 @@
 			files = (
 				240815472C58C80300886D1E /* BasicButtonViewController.swift in Sources */,
 				240815432C58C80300886D1E /* AppDelegate.swift in Sources */,
+				240815642C58D78500886D1E /* BasicRxCocoaViewController.swift in Sources */,
 				240815452C58C80300886D1E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
