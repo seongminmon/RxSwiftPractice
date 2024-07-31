@@ -21,6 +21,7 @@
 		240815662C58DEFC00886D1E /* BasicObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240815652C58DEFC00886D1E /* BasicObservableViewController.swift */; };
 		2408156B2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408156A2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift */; };
 		2408156F2C5A01AB00886D1E /* AddingNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408156E2C5A01AB00886D1E /* AddingNumbersViewController.swift */; };
+		240815712C5A04EB00886D1E /* SimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240815702C5A04EB00886D1E /* SimpleValidationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		240815652C58DEFC00886D1E /* BasicObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicObservableViewController.swift; sourceTree = "<group>"; };
 		2408156A2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewExampleViewController.swift; sourceTree = "<group>"; };
 		2408156E2C5A01AB00886D1E /* AddingNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingNumbersViewController.swift; sourceTree = "<group>"; };
+		240815702C5A04EB00886D1E /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,9 @@
 		2408156C2C5A018200886D1E /* RxExample */ = {
 			isa = PBXGroup;
 			children = (
-				2408156A2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift */,
 				2408156E2C5A01AB00886D1E /* AddingNumbersViewController.swift */,
+				240815702C5A04EB00886D1E /* SimpleValidationViewController.swift */,
+				2408156A2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift */,
 			);
 			path = RxExample;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				240815472C58C80300886D1E /* BasicButtonViewController.swift in Sources */,
 				240815432C58C80300886D1E /* AppDelegate.swift in Sources */,
 				240815642C58D78500886D1E /* BasicRxCocoaViewController.swift in Sources */,
+				240815712C5A04EB00886D1E /* SimpleValidationViewController.swift in Sources */,
 				240815452C58C80300886D1E /* SceneDelegate.swift in Sources */,
 				2408156F2C5A01AB00886D1E /* AddingNumbersViewController.swift in Sources */,
 				240815662C58DEFC00886D1E /* BasicObservableViewController.swift in Sources */,
