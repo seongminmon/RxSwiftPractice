@@ -1,5 +1,5 @@
 //
-//  SimpleTableViewExampleViewController.swift
+//  SimpleTableViewController.swift
 //  RxSwiftPractice
 //
 //  Created by 김성민 on 7/31/24.
@@ -11,7 +11,7 @@ import RxCocoa
 import SnapKit
 import Then
 
-final class SimpleTableViewExampleViewController: UIViewController {
+final class SimpleTableViewController: UIViewController {
     
     private let tableView = UITableView().then {
         $0.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")

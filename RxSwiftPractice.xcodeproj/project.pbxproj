@@ -19,9 +19,10 @@
 		240815622C58CE5B00886D1E /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 240815612C58CE5B00886D1E /* Then */; };
 		240815642C58D78500886D1E /* BasicRxCocoaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240815632C58D78500886D1E /* BasicRxCocoaViewController.swift */; };
 		240815662C58DEFC00886D1E /* BasicObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240815652C58DEFC00886D1E /* BasicObservableViewController.swift */; };
-		2408156B2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408156A2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift */; };
+		2408156B2C59F5CC00886D1E /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408156A2C59F5CC00886D1E /* SimpleTableViewController.swift */; };
 		2408156F2C5A01AB00886D1E /* AddingNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408156E2C5A01AB00886D1E /* AddingNumbersViewController.swift */; };
 		240815712C5A04EB00886D1E /* SimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240815702C5A04EB00886D1E /* SimpleValidationViewController.swift */; };
+		240815732C5A0DD300886D1E /* SimplePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240815722C5A0DD300886D1E /* SimplePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +36,10 @@
 		240815562C58C81500886D1E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		240815632C58D78500886D1E /* BasicRxCocoaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRxCocoaViewController.swift; sourceTree = "<group>"; };
 		240815652C58DEFC00886D1E /* BasicObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicObservableViewController.swift; sourceTree = "<group>"; };
-		2408156A2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewExampleViewController.swift; sourceTree = "<group>"; };
+		2408156A2C59F5CC00886D1E /* SimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 		2408156E2C5A01AB00886D1E /* AddingNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingNumbersViewController.swift; sourceTree = "<group>"; };
 		240815702C5A04EB00886D1E /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
+		240815722C5A0DD300886D1E /* SimplePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,8 @@
 			children = (
 				2408156E2C5A01AB00886D1E /* AddingNumbersViewController.swift */,
 				240815702C5A04EB00886D1E /* SimpleValidationViewController.swift */,
-				2408156A2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift */,
+				2408156A2C59F5CC00886D1E /* SimpleTableViewController.swift */,
+				240815722C5A0DD300886D1E /* SimplePickerViewController.swift */,
 			);
 			path = RxExample;
 			sourceTree = "<group>";
@@ -195,7 +198,8 @@
 				240815452C58C80300886D1E /* SceneDelegate.swift in Sources */,
 				2408156F2C5A01AB00886D1E /* AddingNumbersViewController.swift in Sources */,
 				240815662C58DEFC00886D1E /* BasicObservableViewController.swift in Sources */,
-				2408156B2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift in Sources */,
+				240815732C5A0DD300886D1E /* SimplePickerViewController.swift in Sources */,
+				2408156B2C59F5CC00886D1E /* SimpleTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

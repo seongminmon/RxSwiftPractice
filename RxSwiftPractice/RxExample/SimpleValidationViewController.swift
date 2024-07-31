@@ -41,39 +41,6 @@ final class SimpleValidationViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        
-        let usernameValid = usernameTextField.rx.text.orEmpty
-            .map { $0.count >= self.minimalUsernameLength }
-            .share(replay: 1)
-        
-        let passwordValid = passwordTextField.rx.text.orEmpty
-            .map { $0.count >= self.minimalPasswordLength }
-            .share(replay: 1)
-        
-        let everythingValid = Observable.combineLatest(usernameValid, passwordValid) { $0 && $1 }
-            .share(replay: 1)
-        
-        usernameValid
-            .bind(to: passwordTextField.rx.isEnabled)
-            .disposed(by: disposeBag)
-        
-        usernameValid
-            .bind(to: usernameValidLabel.rx.isHidden)
-            .disposed(by: disposeBag)
-        
-        passwordValid
-            .bind(to: passwordValidLabel.rx.isHidden)
-            .disposed(by: disposeBag)
-        
-        passwordValid
-            .bind(to: signupButton.rx.isEnabled)
-            .disposed(by: disposeBag)
-        
-        signupButton.rx.tap
-            .subscribe { [weak self] _ in
-                self?.presentAlert("로그인 성공")
-            }
-            .disposed(by: disposeBag)
     }
     
     private func configureView() {
@@ -109,6 +76,41 @@ final class SimpleValidationViewController : UIViewController {
             $0.horizontalEdges.equalToSuperview().inset(20)
             $0.height.equalTo(50)
         }
+    }
+    
+    private func setValidation() {
+        let usernameValid = usernameTextField.rx.text.orEmpty
+            .map { $0.count >= self.minimalUsernameLength }
+            .share(replay: 1)
+        
+        let passwordValid = passwordTextField.rx.text.orEmpty
+            .map { $0.count >= self.minimalPasswordLength }
+            .share(replay: 1)
+        
+        let everythingValid = Observable.combineLatest(usernameValid, passwordValid) { $0 && $1 }
+            .share(replay: 1)
+        
+        usernameValid
+            .bind(to: passwordTextField.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        usernameValid
+            .bind(to: usernameValidLabel.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        passwordValid
+            .bind(to: passwordValidLabel.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        passwordValid
+            .bind(to: signupButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        signupButton.rx.tap
+            .subscribe { [weak self] _ in
+                self?.presentAlert("로그인 성공")
+            }
+            .disposed(by: disposeBag)
     }
     
     private func presentAlert(_ title: String) {
