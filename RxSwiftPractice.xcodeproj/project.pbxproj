@@ -19,6 +19,7 @@
 		240815622C58CE5B00886D1E /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 240815612C58CE5B00886D1E /* Then */; };
 		240815642C58D78500886D1E /* BasicRxCocoaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240815632C58D78500886D1E /* BasicRxCocoaViewController.swift */; };
 		240815662C58DEFC00886D1E /* BasicObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240815652C58DEFC00886D1E /* BasicObservableViewController.swift */; };
+		2408156B2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408156A2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		240815562C58C81500886D1E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		240815632C58D78500886D1E /* BasicRxCocoaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRxCocoaViewController.swift; sourceTree = "<group>"; };
 		240815652C58DEFC00886D1E /* BasicObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicObservableViewController.swift; sourceTree = "<group>"; };
+		2408156A2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				240815462C58C80300886D1E /* BasicButtonViewController.swift */,
 				240815632C58D78500886D1E /* BasicRxCocoaViewController.swift */,
 				240815652C58DEFC00886D1E /* BasicObservableViewController.swift */,
+				2408156A2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift */,
 				2408154B2C58C80400886D1E /* Assets.xcassets */,
 				2408154D2C58C80400886D1E /* LaunchScreen.storyboard */,
 				240815502C58C80400886D1E /* Info.plist */,
@@ -168,6 +171,7 @@
 				240815642C58D78500886D1E /* BasicRxCocoaViewController.swift in Sources */,
 				240815452C58C80300886D1E /* SceneDelegate.swift in Sources */,
 				240815662C58DEFC00886D1E /* BasicObservableViewController.swift in Sources */,
+				2408156B2C59F5CC00886D1E /* SimpleTableViewExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
